@@ -1,0 +1,35 @@
+<app-page-projection>
+  <ng-container mainContent>
+    <main>
+      <h4>{{ 'title.qrcode' | translate }}</h4>
+
+      <div class="flex justify-content-start align-items-start">
+
+        <div class="">
+          <ngx-qrcode [value]="qrCode" cssClass="class">
+          </ngx-qrcode>
+        </div>
+
+        <div class="ml-3">
+
+          <div class="flex flex-column">
+            <span>{{'page.collect.expirationDate' | translate}}</span>
+            <span>{{ expirationDate }}</span>
+          </div>
+
+          <div class="mt-3" *ngIf="multicompartment">
+            <span>{{'page.collect.multicompartment' | translate}}</span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="mt-5">
+        <app-info [qrOption]="qrOption">
+        </app-info>
+      </div>
+
+    </main>
+  </ng-container>
+</app-page-projection>

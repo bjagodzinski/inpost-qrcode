@@ -1,0 +1,65 @@
+<app-page-projection>
+  <ng-container mainContent>
+    <main>
+
+      <h4>{{ 'title.main' | translate }}</h4>
+
+      <div class="flex justify-content-start align-items-start">
+        <form class="flex flex-column mr-5" [formGroup]="form">
+
+          <div class="flex flex-wrap gap-3">
+            <p-selectButton [options]="qrOptions"
+                            formControlName="selectedQrOption">
+              <ng-template let-item pTemplate>
+                <span>{{ item | translate }}</span>
+              </ng-template>
+            </p-selectButton>
+          </div>
+
+          <div class="flex flex-column align-items-baseline mt-5">
+            <label for="codeType">Kod odbioru:</label>
+            <div class="flex flex-column justify-content-start align-content-around">
+              <input pInputText
+                     appOnlyDigits
+                     type="text"
+                     formControlName="qrCodeValue"
+                     id="codeType"
+                     class="mt-3"
+                     placeholder="Wpisz kod odbioru..." />
+              <small *ngIf="qrCodeValue?.hasError('required') && qrCodeValue?.dirty"
+                     class="p-error block mt-2">{{'validators.required' | translate}}</small>
+              <small *ngIf="qrCodeValidityError"
+                     class="p-error block mt-2">{{ qrCodeValidityError }}</small>
+              <button *ngIf="!loading"
+                      pButton
+                      pRipple
+                      label="Generuj"
+                      class="inpost-button-primary mt-3"
+                      [disabled]="!qrCodeValue?.value"
+                      (click)="onGenerateQrCode()">
+              </button>
+              <div class="w-full flex align-items-center justify-content-center mt-3">
+                <i *ngIf="loading" class="pi pi-spin pi-spinner" style="font-size: 2rem"></i>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div>
+          <ngx-qrcode
+            [elementType]="elementType"
+            [value]="value"
+            cssClass="class"
+            [errorCorrectionLevel]="level">
+          </ngx-qrcode>
+        </div>
+      </div>
+
+      <div class="mt-5">
+        <app-info [qrOption]="selectedQrOption?.value">
+        </app-info>
+      </div>
+
+    </main>
+  </ng-container>
+</app-page-projection>
+

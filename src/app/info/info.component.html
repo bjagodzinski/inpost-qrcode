@@ -1,0 +1,45 @@
+<main class="flex flex-column w-full justify-content-around">
+
+  <section *ngIf="qrOption == 'COLLECT'" class="w-full flex flex-column">
+
+    <h4>{{'page.collect.title' | translate}}</h4>
+
+    <div class="w-full justify-content-between flex">
+      <section class="flex flex-column w-4">
+        <h5>{{'page.info.step1'|translate}}</h5>
+        <span>{{'page.info.step1.message'|translate}}</span>
+      </section>
+      <section class="flex flex-column w-4">
+        <h5>{{'page.info.step2'|translate}}</h5>
+        <span>{{'page.info.step1.message'|translate}}</span>
+      </section>
+      <section class="flex flex-column w-4">
+        <h5>{{'page.info.step2'|translate}}</h5>
+        <span>{{'page.info.step1.message'|translate}}</span>
+      </section>
+    </div>
+
+  </section>
+
+  <section *ngIf="qrOption == 'RETURN'" class="w-full flex flex-column">
+
+    <h4>{{'page.return.title' | translate}}</h4>
+
+    <div class="w-full justify-content-between flex">
+      <section class="flex flex-column w-4">
+        <h5>{{'page.info.step1'|translate}}</h5>
+        <span>{{'page.info.step1.message'|translate}}</span>
+      </section>
+      <section class="flex flex-column w-4">
+        <h5>{{'page.info.step2'|translate}}</h5>
+        <span>{{'page.info.step1.message'|translate}}</span>
+      </section>
+      <section class="flex flex-column w-4">
+        <h5>{{'page.info.step2'|translate}}</h5>
+        <span>{{'page.info.step1.message'|translate}}</span>
+      </section>
+    </div>
+
+  </section>
+
+</main>

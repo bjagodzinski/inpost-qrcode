@@ -1,0 +1,22 @@
+<app-page-projection>
+  <ng-container mainContent>
+    <main>
+      <h4>{{ 'title.qrcode' | translate }}</h4>
+
+      <div class="flex justify-content-start align-items-start">
+
+        <div class="">
+          <ngx-qrcode [value]="qrCode" cssClass="class">
+          </ngx-qrcode>
+        </div>
+
+      </div>
+
+      <div class="mt-5">
+        <app-info [qrOption]="qrOption">
+        </app-info>
+      </div>
+
+    </main>
+  </ng-container>
+</app-page-projection>

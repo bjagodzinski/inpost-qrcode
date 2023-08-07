@@ -1,0 +1,6 @@
+{
+  "title": "Generate QR for:",
+  "validators" : {
+    "badCode": "Wrong code"
+  }
+}

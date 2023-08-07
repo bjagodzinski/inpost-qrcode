@@ -1,0 +1,27 @@
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Use Flexbox to display <li> elements horizontally */
+
+  li {
+    padding: 5px;
+
+    &:not(:last-child)::after {
+      content: " |"; /* Add a pipe "|" character after each <li> element, except the last one */
+    }
+  }
+}
+
+.inpost-button-primary {
+  background: #FFCD00;
+  border-color: #FFCD00;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+:host ::ng-deep .p-selectbutton .p-button.p-highlight {
+  background: #FFCD00;
+  border-color: #FFCD00;
+  color: #000000;
+}
