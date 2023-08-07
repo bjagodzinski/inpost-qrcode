@@ -1,34 +1,34 @@
 {
-  "COLLECT": "Collection",
-  "RETURN": "Return",
+  "COLLECT": "Odbiór",
+  "RETURN": "Zwrot",
 
   "title": {
-    "main": "Generate QR for:",
-    "qrcode": "Your QR code"
+    "main": "Generuj QR dla:",
+    "qrcode": "Twój kod QR"
   },
 
   "page": {
 
     "collect": {
-      "title": "How to pick up the parcel?",
-      "expirationDate": "Expiration date",
-      "multicompartment": "Multistore"
+      "title": "Jak odebrać przesyłkę?",
+      "expirationDate": "Data ważności",
+      "multicompartment": "Multiskrytka"
     },
 
     "return": {
-      "title": "How to return a parcel?"
+      "title": "Jak zwrócić przesyłkę?"
     },
 
     "info": {
-      "step1" : "Step 1",
+      "step1" : "Krok 1",
       "step1.message" : "...",
-      "step2" : "Step 2",
-      "step3" : "Step 3"
+      "step2" : "Krok 2",
+      "step3" : "Krok 3"
     }
 
   },
 
   "validators": {
-    "badCode": "Invalid pickup code"
+    "badCode": "Błędny kod odbioru"
   }
 }

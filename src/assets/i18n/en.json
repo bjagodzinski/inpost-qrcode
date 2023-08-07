@@ -1,6 +1,34 @@
 {
-  "title": "Generate QR for:",
-  "validators" : {
-    "badCode": "Wrong code"
+  "COLLECT": "Collection",
+  "RETURN": "Return",
+
+  "title": {
+    "main": "Generate QR for:",
+    "qrcode": "Your QR code"
+  },
+
+  "page": {
+
+    "collect": {
+      "title": "How to pick up the parcel?",
+      "expirationDate": "Expiration date",
+      "multicompartment": "Multistore"
+    },
+
+    "return": {
+      "title": "How to return a parcel?"
+    },
+
+    "info": {
+      "step1" : "Step 1",
+      "step1.message" : "...",
+      "step2" : "Step 2",
+      "step3" : "Step 3"
+    }
+
+  },
+
+  "validators": {
+    "badCode": "Invalid pickup code"
   }
 }
